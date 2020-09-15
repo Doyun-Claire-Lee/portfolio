@@ -161,9 +161,6 @@
         position: relative;
         margin: auto;
     }
-    #project .slideshow-container .mySlides img {
-        height: 750px;
-    }
 
     /* Hide the images by default */
     #project .mySlides {
@@ -185,6 +182,35 @@
         border-radius: 0 3px 3px 0;
         user-select: none;
     }
+    #project .imgBox {
+        width: 1100px;
+        margin: 20px auto;
+    }
+    #project .imgs {
+        display: inline-block;
+        width: 498px;
+        height: 300px;
+        padding: 10px 20px;
+        margin: 20px 20px 0px 0px;
+        background-color: rgb(108, 106, 106);
+        border-radius: 10px;
+    }
+    #project .imgs:nth-child(even) {
+        margin-right: 0px;
+        
+    }
+    #project .imgs h3 {
+        color: #eee;
+        text-align: center;
+    }
+    #project .imgs .img {
+        float: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20%;
+        height: 70px;
+        cursor: pointer;
+    }
 
     /* Position the "next button" to the right */
     #project .next {
@@ -195,7 +221,7 @@
     /* On hover, add a black background color with a little bit see-through */
     #project .prev:hover, #project .next:hover {
         color: #eee;
-        background-color: rgba(0,0,0,0.8);
+        background-color: #4c4c4c;
     }
 
     /* Caption text */
@@ -220,18 +246,19 @@
 
     /* The dots/bullets/indicators */
     #project .dot {
+        color: #4c4c4c;
         cursor: pointer;
-        height: 15px;
-        width: 15px;
+        height: 30px;
+        width: 150px;
         margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
+        border-bottom: 3px solid white;
     }
 
-    #project .active, #project .dot:hover {
-        background-color: #717171;
+    #project .dot.active, #project .dot:hover {
+        /* background-color: #717171; */
+        border-bottom: 3px solid rgb(108, 106, 106);
     }
 
     /* Fading animation */
@@ -290,7 +317,7 @@
             <div class="right" style="width: 750px;">
                 <div class="profileContent">
                     <h2>개발자 이도윤</h2>
-                    <p>행정학을 전공하고 외국계 회사에 근무하다 개발의 매력에 빠져 개발자로 전향하였습니다. <br> 국비지원 과정을 수료하였습니다.
+                    <p>행정학을 전공하고 외국계 회사에 근무하다 개발의 매력에 빠져 개발자로 전향하였습니다. <br> 국비지원 개발자 과정을 수료하였습니다.
                     </p>
                 </div>
                 <div class="profileContent">
@@ -362,19 +389,40 @@
 
             <!-- The dots/circles -->
             <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(0)">Hotel5</span>
+                <span class="dot" onclick="currentSlide(1)">교육센터관리</span>
+                <span class="dot" onclick="currentSlide(2)">도서관관리</span>
+                <span class="dot" onclick="currentSlide(3)">Orello</span>
+                <span class="dot" onclick="currentSlide(4)">Pettoy</span>
+                <span class="dot" onclick="currentSlide(5)">ERPOS</span>
             </div>
             <div class="slideshow-container">
 
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
                     <div class="imgBox">  
+                        <div class="imgs">
+                            <h3>주제 선정 & 요구분석 & 화면설계</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).png'"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(2\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(2\).png'"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(3\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(3\).png'"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).jpg'"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(2\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(2\).jpg'"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(3\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(3\).jpg'"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(4\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(4\).jpg'"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/meeting.jpg);" onclick="location.href='WebContent/images/project/hotel5/meeting.jpg'"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/meeting2.jpg);" onclick="location.href='WebContent/images/project/hotel5/meeting2.jpg'"></div>
 
+                        </div>
+                        <div class="imgs">
+                            <h3>데이터구조</h3>
+                        </div>
+                        <div class="imgs">
+                            <h3>산출물</h3>
+                        </div>
+                        <div class="imgs">
+                            <h3>구현화면</h3>
+                        </div>
                     </div>
                     <div class="descBox">
 
