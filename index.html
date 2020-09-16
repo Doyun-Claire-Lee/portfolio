@@ -178,7 +178,6 @@
     }
 
     /* #### 프로젝트 구간 #### */
-
     /* Hide the images by default */
     #project {
         padding-top: 30px;
@@ -189,7 +188,20 @@
     #project .mySlides {
         display: none;
     }
-
+    /* The dots/bullets/indicators */
+    #project .dot {
+        color: #4c4c4c;
+        cursor: pointer;
+        height: 30px;
+        width: 150px;
+        margin: 0 2px;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        border-bottom: 3px solid white;
+    }
+    #project .dot.active, #project .dot:hover {
+        border-bottom: 3px solid rgb(108, 106, 106);
+    }
     /* Next & previous buttons */
     #project .prev, .next {
         cursor: pointer;
@@ -240,7 +252,6 @@
         display: block;
         clear: both;
     }
-
     #project .descBox {
         width: 1060px;
         height: 300px;
@@ -255,9 +266,8 @@
         text-align: left;
         margin:0;
     }
-
     #project .descBox h2 small{
-        font-size: 0.8em;
+        font-size: 0.6em;
         font-weight: normal;
         color: #eee;
     }
@@ -285,31 +295,7 @@
         text-align: center;
     }
 
-    /* Number text (1/3 etc) */
-    #project .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-    }
 
-    /* The dots/bullets/indicators */
-    #project .dot {
-        color: #4c4c4c;
-        cursor: pointer;
-        height: 30px;
-        width: 150px;
-        margin: 0 2px;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-        border-bottom: 3px solid white;
-    }
-
-    #project .dot.active, #project .dot:hover {
-        /* background-color: #717171; */
-        border-bottom: 3px solid rgb(108, 106, 106);
-    }
 
     /* Fading animation */
     #project .fade {
@@ -329,6 +315,7 @@
         to {opacity: 1}
     }
 
+    /* #### Footer 구간 #### */
     footer {
         width: 100%;
         height: 250px;
@@ -336,17 +323,21 @@
         color: #bbb;
         text-align: center;
     }
+    footer .container {
+        height: 150px;
+        padding: 30px 50px;
+        margin: 0px auto;
+    }
+    footer h3 {
+        margin: 5px;
+    }
     footer a {
         color: #bbb;
     }
     footer small {
         font-weight: normal;
     }
-    footer .container {
-        height: 150px;
-        padding: 30px 50px;
-        margin: 0px auto;
-    }
+
 
 </style>
 <body>
@@ -551,16 +542,75 @@
                     <div class="imgBox">  
                         <div class="imgs">
                             <h3>주제 선정 & 요구분석</h3>
-                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/표지.png);" onclick="location.href='WebContent/images/project/Center/표지.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항001.png);" onclick="location.href='WebContent/images/project/Center/요구사항001.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항002.png);" onclick="location.href='WebContent/images/project/Center/요구사항002.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항003.png);" onclick="location.href='WebContent/images/project/Center/요구사항003.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항004.png);" onclick="location.href='WebContent/images/project/Center/요구사항004.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항005.png);" onclick="location.href='WebContent/images/project/Center/요구사항005.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항006.png);" onclick="location.href='WebContent/images/project/Center/요구사항006.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항007.png);" onclick="location.href='WebContent/images/project/Center/요구사항007.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항008.png);" onclick="location.href='WebContent/images/project/Center/요구사항008.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항009.png);" onclick="location.href='WebContent/images/project/Center/요구사항009.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항010.png);" onclick="location.href='WebContent/images/project/Center/요구사항010.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항011.png);" onclick="location.href='WebContent/images/project/Center/요구사항011.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항012.png);" onclick="location.href='WebContent/images/project/Center/요구사항012.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항013.png);" onclick="location.href='WebContent/images/project/Center/요구사항013.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/요구사항014.png);" onclick="location.href='WebContent/images/project/Center/요구사항014.png';"></div>
                         </div>
                         <div class="imgs">
                             <h3>데이터구조</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db001.png);" onclick="location.href='WebContent/images/project/Center/db001.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db002.png);" onclick="location.href='WebContent/images/project/Center/db002.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db003.png);" onclick="location.href='WebContent/images/project/Center/db003.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db004.png);" onclick="location.href='WebContent/images/project/Center/db004.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db005.png);" onclick="location.href='WebContent/images/project/Center/db005.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db006.png);" onclick="location.href='WebContent/images/project/Center/db006.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db007.png);" onclick="location.href='WebContent/images/project/Center/db007.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db008.png);" onclick="location.href='WebContent/images/project/Center/db008.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db009.png);" onclick="location.href='WebContent/images/project/Center/db009.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db010.png);" onclick="location.href='WebContent/images/project/Center/db010.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db011.png);" onclick="location.href='WebContent/images/project/Center/db011.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db012.png);" onclick="location.href='WebContent/images/project/Center/db012.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db013.png);" onclick="location.href='WebContent/images/project/Center/db013.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db014.png);" onclick="location.href='WebContent/images/project/Center/db014.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/db001.png);" onclick="location.href='WebContent/images/project/Center/db001.png';"></div>
                         </div>
                         <div class="imgs">
                             <h3>산출물</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물001.png);" onclick="location.href='WebContent/images/project/Center/산출물001.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물002.png);" onclick="location.href='WebContent/images/project/Center/산출물002.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물003.png);" onclick="location.href='WebContent/images/project/Center/산출물003.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물004.png);" onclick="location.href='WebContent/images/project/Center/산출물004.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물005.png);" onclick="location.href='WebContent/images/project/Center/산출물005.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물006.png);" onclick="location.href='WebContent/images/project/Center/산출물006.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물007.png);" onclick="location.href='WebContent/images/project/Center/산출물007.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물008.png);" onclick="location.href='WebContent/images/project/Center/산출물008.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물009.png);" onclick="location.href='WebContent/images/project/Center/산출물009.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물010.png);" onclick="location.href='WebContent/images/project/Center/산출물010.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물011.png);" onclick="location.href='WebContent/images/project/Center/산출물011.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물012.png);" onclick="location.href='WebContent/images/project/Center/산출물012.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물013.png);" onclick="location.href='WebContent/images/project/Center/산출물013.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물014.png);" onclick="location.href='WebContent/images/project/Center/산출물014.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/산출물015.png);" onclick="location.href='WebContent/images/project/Center/산출물015.png';"></div>
                         </div>
                         <div class="imgs">
                             <h3>구현화면</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드16.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드16.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드17.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드17.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드18.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드18.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드19.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드19.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드20.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드20.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드21.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드21.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드22.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드22.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드23.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드23.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드24.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드24.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드25.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드25.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드26.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드26.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드27.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드27.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드28.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드28.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드29.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드29.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/Center/슬라이드30.PNG);" onclick="location.href='WebContent/images/project/Center/슬라이드30.PNG';"></div>
                         </div>
                     </div>
                     <div class="descBox">
@@ -673,22 +723,21 @@
 
 
         </div>
-
-
-
     </section>
+
     <footer id="contact">
         <div class="container">
             <h2>Contact</h2>
             <h3>Phone. <small> 010.7279.0703</small></h3>
             <h3>Email. <small> doyun.lee@kakao.com</small></h3>
             <h3>Git. <small><a href="https://github.com/Doyun-Claire-Lee">github.com/Doyun-Claire-Lee</a></small></h3>
-            <p></p>
+            <br>
             <p>
                 Copyright &copy; 2020 all rights reserved
             </p>
         </div>
     </footer>
+
     <script src="WebContent/js/jquery-1.12.4.js"></script>
     <script>
         //스크롤 내리면 헤더 색상 진해지도록
@@ -711,8 +760,8 @@
       typingTxt=typingTxt.split(""); // 한글자씩 자른다. 
      
       if (typingBool==false){ // 타이핑이 진행되지 않았다면 
-       typingBool=true;   
-       var tyInt = setInterval(typing,100); // 반복동작 
+        typingBool=true;   
+        var tyInt = setInterval(typing,100); // 반복동작 
       } 
      
       function typing(){ 
@@ -724,49 +773,45 @@
        } 
      }  
 
-    // 프로젝트 슬라이더
+        // 프로젝트 슬라이더
+        var slideIndex = 0; //slide index
 
-    var slideIndex = 0; //slide index
+        window.onload=function(){
+            showSlides(slideIndex);
+        }
+        // Next/previous controls
+        function moveSlides(n) {
+            slideIndex = slideIndex + n
+            showSlides(slideIndex);
+        }
+        // Thumbnail image controls
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides(slideIndex);
+        }
+        function showSlides(n) {
 
-    window.onload=function(){
-        showSlides(slideIndex);
-    }
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            var size = slides.length;
 
-    // Next/previous controls
-    function moveSlides(n) {
-        slideIndex = slideIndex + n
-        showSlides(slideIndex);
-    }
+            if ((n+1) > size) {
+                slideIndex = 0; n = 0;
+            }else if (n < 0) {
+                slideIndex = (size-1);
+                n = (size-1);
+            }
 
-    // Thumbnail image controls
-    function currentSlide(n) {
-        slideIndex = n;
-        showSlides(slideIndex);
-    }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
 
-    function showSlides(n) {
-
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    var size = slides.length;
-
-    if ((n+1) > size) {
-        slideIndex = 0; n = 0;
-    }else if (n < 0) {
-        slideIndex = (size-1);
-        n = (size-1);
-    }
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-        slides[n].style.display = "block";
-        dots[n].className += " active";
-    }
+                slides[n].style.display = "block";
+                dots[n].className += " active";
+        }
     </script>
 </body>
 </html>
