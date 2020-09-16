@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Doyun's Portfolio</title>
     <script src="https://kit.fontawesome.com/47d17588e6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"> 
 </head>
@@ -17,12 +17,18 @@
     html, body { 
         margin: 0; padding:0; 
         font-family: 'NanumSquare'; 
-        color: #333;}
+        color: #333;
+    }
+    section{
+        height: 4300px;
+    }
+    body {
+        position: relative;
+    }
     .container {
         width: 1200px;
         margin: 50px auto;
-        padding: 50px;
-
+        padding: 20px 0px;
     }
     h2 {
         text-align: center; 
@@ -132,13 +138,22 @@
         height: 30px;
         font-size: 1.2em;
     }
+    .profileContent img {
+        width: 20px;
+    }
 
     /* #### 발전과정 구간 #### */
     #step {
+        height: 1300px;
+        width: 100%;
+        padding-top: 0px;
         background-image: url("WebContent/images/wide_1.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         color: #ddd;
+    }
+    #step h2 {
+        margin: 40px auto;
     }
     #step .steps {
         width: 1000px;
@@ -157,12 +172,20 @@
 
     #project .slideshow-container {
         max-width: 1200px;
-        max-height: 750px;
+        min-height: 1100px;
         position: relative;
         margin: auto;
     }
 
+    /* #### 프로젝트 구간 #### */
+
     /* Hide the images by default */
+    #project {
+        padding-top: 30px;
+    }
+    #project h2 {
+        margin: 40px auto;
+    }
     #project .mySlides {
         display: none;
     }
@@ -177,7 +200,7 @@
         padding: 16px;
         color: #888;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 20px;
         transition: 0.6s ease;
         border-radius: 0 3px 3px 0;
         user-select: none;
@@ -207,9 +230,36 @@
         float: left;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 20%;
+        width: 19%;
         height: 70px;
+        margin: 2px;
         cursor: pointer;
+    }
+    #project .imgs .img:last-child::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+
+    #project .descBox {
+        width: 1060px;
+        height: 300px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgb(181, 168, 157);
+        border-radius: 10px;
+
+    }
+    #project .descBox h2{
+        color: #555;
+        text-align: left;
+        margin:0;
+    }
+
+    #project .descBox h2 small{
+        font-size: 0.8em;
+        font-weight: normal;
+        color: #eee;
     }
 
     /* Position the "next button" to the right */
@@ -279,7 +329,17 @@
         to {opacity: 1}
     }
 
-
+    footer {
+        width: 100%;
+        height: 250px;
+        background-color: #555;
+        color: #bbb;
+    }
+    footer .container {
+        height: 150px;
+        padding: 30px 50px;
+        margin: 0px auto;
+    }
 
 </style>
 <body>
@@ -287,10 +347,10 @@
     <header>
         <nav class="navbar">
             <span onclick="location.href='#';">HOME</span>
-            <span onclick="location.href='#';">PROFILE</span>
-            <span onclick="location.href='#';">SKILL</span>
-            <span onclick="location.href='#';">PROJECT</span>
-            <span onclick="location.href='#';">CONTACT</span>
+            <span onclick="location.href='#profile';">PROFILE</span>
+            <span onclick="location.href='#step';">STEPS</span>
+            <span onclick="location.href='#project';">PROJECT</span>
+            <span onclick="location.href='#contact';">CONTACT</span>
         </nav>
     </header>
     <section>
@@ -311,7 +371,7 @@
                     <h2>Doyun Lee</h2>
                     <h3><i class="fas fa-phone-square-alt"></i> <small>010.7279.0703</small></h3>
                     <h3><i class="fas fa-envelope"></i> <small>doyun.lee@kakao.com</small></h3>
-                    <h3><i class="fab fa-github-square"></i> <small>github.com/Doyun-Claire-Lee</small></h3>
+                    <h3><i class="fab fa-github-square"></i> <small style="cursor: pointer;" onclick="location.href='http://github.com/Doyun-Claire-Lee';">github.com/Doyun-Claire-Lee</small></h3>
                 </div>
             </div>
             <div class="right" style="width: 750px;">
@@ -321,33 +381,33 @@
                     </p>
                 </div>
                 <div class="profileContent">
-                    <h2>사용 가능 기술</h2>
+                    <h2>사용기술</h2>
                     <table>
                         <tr>
                             <td><i class="fab fa-java"></i> Java</td>
+                            <td><i class="fab fa-java"></i> Spring-jdbc</td>
                             <td><i class="fab fa-java"></i> JDBC</td>
                             <td><i class="fab fa-python"></i> Python</td>
                             <td><i class="fas fa-database"></i> Oracle</td>
-                            <td><i class="fas fa-database"></i> ERD</td>
                         </tr>
                         <tr>
                             <td><i class="fab fa-html5"></i> HTML5</td>
                             <td><i class="fab fa-css3-alt"></i> CSS3</td>
                             <td><i class="fab fa-js-square"></i> JavaScript</td>
                             <td><i class="fab fa-bootstrap"></i> BootStrap</td>
-                            <td> jQuery</td>
+                            <td><img src="WebContent/images/jquery.png"> jQuery</td>
                         </tr>
                         <tr>
                             <td><i class="fab fa-java"></i> Servlet</td>
                             <td><i class="fab fa-java"></i> JSP</td>
-                            <td>ajax</td>
-                            <td>spring</td>
-                            <td>MyBatis</td>
+                            <td><img src="WebContent/images/ajax.png"> ajax</td>
+                            <td><img src="WebContent/images/spring.png"> spring</td>
+                            <td><img src="WebContent/images/mybatis.png"> MyBatis</td>
                         </tr>
                     </table>
                 </div>
                 <div class="profileContent">
-                    <h2>관심있는 분야</h2>
+                    <h2>관심분야</h2>
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat accusantium veniam vero nulla nihil! Quasi ab blanditiis aspernatur officiis, accusamus, fuga laboriosam amet totam corrupti perspiciatis ipsa veritatis, ratione nulla.</p>
                 </div>
             </div>
@@ -391,7 +451,7 @@
             <div style="text-align:center">
                 <span class="dot" onclick="currentSlide(0)">Hotel5</span>
                 <span class="dot" onclick="currentSlide(1)">교육센터관리</span>
-                <span class="dot" onclick="currentSlide(2)">도서관관리</span>
+                <span class="dot" onclick="currentSlide(2)">도서관</span>
                 <span class="dot" onclick="currentSlide(3)">Orello</span>
                 <span class="dot" onclick="currentSlide(4)">Pettoy</span>
                 <span class="dot" onclick="currentSlide(5)">ERPOS</span>
@@ -402,16 +462,112 @@
                 <div class="mySlides fade">
                     <div class="imgBox">  
                         <div class="imgs">
-                            <h3>주제 선정 & 요구분석 & 화면설계</h3>
-                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).png'"></div>
-                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(2\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(2\).png'"></div>
-                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(3\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(3\).png'"></div>
-                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).jpg'"></div>
-                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(2\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(2\).jpg'"></div>
-                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(3\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(3\).jpg'"></div>
-                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(4\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(4\).jpg'"></div>
-                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/meeting.jpg);" onclick="location.href='WebContent/images/project/hotel5/meeting.jpg'"></div>
-                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/meeting2.jpg);" onclick="location.href='WebContent/images/project/hotel5/meeting2.jpg'"></div>
+                            <h3>주제 선정 & 요구분석</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(2\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(2\).png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(3\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(3\).png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).jpg';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(2\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(2\).jpg';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(3\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(3\).jpg';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(4\).jpg);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(4\).jpg';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/image001.png);" onclick="location.href='WebContent/images/project/hotel5/image001.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/image002.png);" onclick="location.href='WebContent/images/project/hotel5/image002.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/image003.png);" onclick="location.href='WebContent/images/project/hotel5/image003.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/image004.png);" onclick="location.href='WebContent/images/project/hotel5/image004.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/image005.png);" onclick="location.href='WebContent/images/project/hotel5/image005.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/image006.png);" onclick="location.href='WebContent/images/project/hotel5/image006.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/meeting.jpg);" onclick="location.href='WebContent/images/project/hotel5/meeting.jpg';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/meeting2.jpg);" onclick="location.href='WebContent/images/project/hotel5/meeting2.jpg';"></div>
+                        </div>
+                        <div class="imgs">
+                            <h3>데이터구조</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/Hotel5_데이터설계_고객.jpg);" onclick="location.href='WebContent/images/project/hotel5/Hotel5_데이터설계_고객.jpg';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/Hotel5_데이터설계_직원.jpg);" onclick="location.href='WebContent/images/project/hotel5/Hotel5_데이터설계_직원.jpg';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드5.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드5.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드6.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드6.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드7.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드7.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드8.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드8.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/데이터001.png);" onclick="location.href='WebContent/images/project/hotel5/데이터001.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/데이터002.png);" onclick="location.href='WebContent/images/project/hotel5/데이터002.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/데이터003.png);" onclick="location.href='WebContent/images/project/hotel5/데이터003.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/데이터004.png);" onclick="location.href='WebContent/images/project/hotel5/데이터004.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/데이터005.png);" onclick="location.href='WebContent/images/project/hotel5/데이터005.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/데이터006.png);" onclick="location.href='WebContent/images/project/hotel5/데이터006.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/데이터007.png);" onclick="location.href='WebContent/images/project/hotel5/데이터007.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/데이터008.png);" onclick="location.href='WebContent/images/project/hotel5/데이터008.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/데이터009.png);" onclick="location.href='WebContent/images/project/hotel5/데이터009.png';"></div>
+                        </div>
+                        <div class="imgs">
+                            <h3>산출물</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드3.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드3.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드4.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드4.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드9.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드9.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드10.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드10.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/산출물001.png);" onclick="location.href='WebContent/images/project/hotel5/산출물001.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/화면설계001.png);" onclick="location.href='WebContent/images/project/hotel5/화면설계001.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/화면설계002.png);" onclick="location.href='WebContent/images/project/hotel5/화면설계002.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/화면설계003.png);" onclick="location.href='WebContent/images/project/hotel5/화면설계003.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/화면설계004.png);" onclick="location.href='WebContent/images/project/hotel5/화면설계004.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/화면설계005.png);" onclick="location.href='WebContent/images/project/hotel5/화면설계005.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/화면설계006.png);" onclick="location.href='WebContent/images/project/hotel5/화면설계006.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/화면설계007.png);" onclick="location.href='WebContent/images/project/hotel5/화면설계007.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/화면설계008.png);" onclick="location.href='WebContent/images/project/hotel5/화면설계008.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/화면설계009.png);" onclick="location.href='WebContent/images/project/hotel5/화면설계009.png';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/화면설계010.png);" onclick="location.href='WebContent/images/project/hotel5/화면설계010.png';"></div>
+                        </div>
+                        <div class="imgs">
+                            <h3>구현화면</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드12.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드12.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드13.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드13.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드14.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드14.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드15.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드15.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드16.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드16.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드17.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드17.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드18.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드18.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드19.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드19.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드20.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드20.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드21.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드21.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드22.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드22.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드23.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드23.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드24.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드24.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드25.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드25.PNG';"></div>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/슬라이드26.PNG);" onclick="location.href='WebContent/images/project/hotel5/슬라이드26.PNG';"></div>
+                        </div>
+                    </div>
+                    <div class="descBox">
+                        <h2> # Hotel5 <small>파일 입출력을 통한 호텔 예약/통합 관리 콘솔 프로그램</small></h2>
+
+                    </div>
+                </div>
+          
+                <div class="mySlides fade">
+                    <div class="imgBox">  
+                        <div class="imgs">
+                            <h3>주제 선정 & 요구분석</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).png';"></div>
+                        </div>
+                        <div class="imgs">
+                            <h3>데이터구조</h3>
+                        </div>
+                        <div class="imgs">
+                            <h3>산출물</h3>
+                        </div>
+                        <div class="imgs">
+                            <h3>구현화면</h3>
+                        </div>
+                    </div>
+                    <div class="descBox">
+                        <h2> # 교육센터관리 <small>JDBC를 이용한 교육센터관리 콘솔 프로그램</small></h2>
+
+                    </div>
+                </div>
+          
+                <div class="mySlides fade">
+                    <div class="imgBox">  
+                        <div class="imgs">
+                            <h3>주제 선정 & 요구분석</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).png';"></div>
+
 
                         </div>
                         <div class="imgs">
@@ -425,29 +581,81 @@
                         </div>
                     </div>
                     <div class="descBox">
+                        <h2> # 도서관 <small>JDBC를 이용한 도서관 이용/관리 콘솔 프로그램</small></h2>
+
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="imgBox">  
+                        <div class="imgs">
+                            <h3>주제 선정 & 요구분석</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).png';"></div>
+
+                        </div>
+                        <div class="imgs">
+                            <h3>데이터구조</h3>
+                        </div>
+                        <div class="imgs">
+                            <h3>산출물</h3>
+                        </div>
+                        <div class="imgs">
+                            <h3>구현화면</h3>
+                        </div>
+                    </div>
+                    <div class="descBox">
+                        <h2> # Orello <small>JDBC/Servlet/JSP를 이용한 프로젝트 관리 웹 페이지</small></h2>
 
                     </div>
                 </div>
           
                 <div class="mySlides fade">
+                    <div class="imgBox">  
+                        <div class="imgs">
+                            <h3>주제 선정 & 요구분석</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).png';"></div>
 
+                        </div>
+                        <div class="imgs">
+                            <h3>데이터구조</h3>
+                        </div>
+                        <div class="imgs">
+                            <h3>산출물</h3>
+                        </div>
+                        <div class="imgs">
+                            <h3>구현화면</h3>
+                        </div>
+                    </div>
+                    <div class="descBox">
+                        <h2> # PETTOY <small>JDBC/Servlet/JSP를 이용한 반려동물용품 쇼핑몰</small></h2>
+
+                    </div>
                 </div>
           
                 <div class="mySlides fade">
+                    <div class="imgBox">  
+                        <div class="imgs">
+                            <h3>주제 선정 & 요구분석</h3>
+                            <div class="img" style="background-image: url(WebContent/images/project/hotel5/analysis\ \(1\).png);" onclick="location.href='WebContent/images/project/hotel5/analysis\ \(1\).png';"></div>
 
+                        </div>
+                        <div class="imgs">
+                            <h3>데이터구조</h3>
+                        </div>
+                        <div class="imgs">
+                            <h3>산출물</h3>
+                        </div>
+                        <div class="imgs">
+                            <h3>구현화면</h3>
+                        </div>
+                    </div>
+                    <div class="descBox">
+                        <h2> # ERPOS <small>Spring-JDBC/Spring을 이용한 POS + ERP 웹 페이지</small></h2>
+
+                    </div>
                 </div>
           
-                <div class="mySlides fade">
->
-                </div>
-          
-                <div class="mySlides fade">
 
-                </div>
-          
-                <div class="mySlides fade">
-
-                </div>
           
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
@@ -462,6 +670,15 @@
 
 
     </section>
+    <footer id="contact">
+        <div class="container">
+            <h3>Contact</h3>
+            <p></p>
+            <p>
+                Copyright &copy; 2020 all rights reserved
+            </p>
+        </div>
+    </footer>
     <script src="WebContent/js/jquery-1.12.4.js"></script>
     <script>
         //스크롤 내리면 헤더 색상 진해지도록
